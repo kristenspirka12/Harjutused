@@ -6,11 +6,12 @@ public class NameGenerator {
 
 	private String[] firstNames = {"Kati", "Mati", "Jaanus", "Peeter", "Mari" };
 	private String[] lastNames = {"Tamm", "Kask", "Pilv", "Saar", "Oja", "Luts" };
-	private String[] randomNames = {"a", "e", "o", "x", "b", "l", "f", "m", "z", "h", "t"};
+	private String[] chars = {"a", "e", "o", "x", "b", "l", "f", "m", "z", "h", "t", "w"};
+	String[] peopleNames = { "Peeter", "Daniel", "Karl", "Hendrik", "Oliver", "Eva", "Diana", "Reet", "Jane" };
 	Random random = new Random();
 	
-	/*TODO Kui ülesanded on valmis, siis teha need ümbes selliselt, 
-	et oleks võimalik valida mehe ja naiste nimedele vahel. */
+	/*TODO Kui ülesanded on valmis, siis teha need ümber selliselt, 
+	et oleks võimalik valida mehe ja naiste nimede vahel. */
 	
 	public String getRandomFirstName() {
 		return firstNames[random.nextInt(firstNames.length)];
@@ -24,19 +25,37 @@ public class NameGenerator {
 		return getRandomFirstName() + " " + getRandomLastName();
 	}
 	
-	// Juhuslikest tähtedest 
+	// Juhuslikest tähtedest sõna
+	
 	public String generateRandomName(int charNumber) {
 		return "";
 	}
 	
+	String getRandomChar(int charNumber) {
+		
+		return chars[random.nextInt(chars.length)];
+	}
+	
 	public Integer generateRandomNumberBetween(int beg, int end) {
 		return null;
-		//TODO
 		
 	}
 	
 	public boolean flipPenny() {
-		//TODO
 		return true;
+	}
+	
+	
+	public String[] getRandomNames(int amount) {
+		//uue massiivi(String[]) loomine, mis on sama pikk kui "amount" parameeter
+		String peopleNames[] = new String[amount];
+		
+		//massiivi lisan nimed
+		for (int i = 0; i < peopleNames.length; i++) { 
+			// iga kord lisan nime massiivi.
+		}
+		return peopleNames;
+		//tagastan massiiivi nimedega.
+		//return ...
 	}
 }
