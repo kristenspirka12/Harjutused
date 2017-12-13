@@ -29,8 +29,25 @@ public class MapDemo {
 		System.out.println(demoMap);
 		
 		// Kontroll, kas vastava vıtmega paar on olemas.
-		System.out.println(demoMap.containsKey(2));
-
+		System.out.println(demoMap.containsKey(1));
+		System.out.println("_________________________");
+		
+		// Mapi l‰bimine
+		for (Map.Entry<Integer, String> entry : demoMap.entrySet()) {
+			System.out.println("Vıti: " + entry.getKey() + " v‰‰rtus: " + entry.getValue());
+		}
+		
+		System.out.println("_________________________");
+		// Mapi kıik vıtmed.
+		System.out.println("Mapi vıtmed: " + demoMap.keySet());
+		for (Integer key : demoMap.keySet()) {
+			System.out.println(key);
+		}
+		
+		System.out.println("_________________________");
+		// Mapi kıik v‰‰rtused
+		System.out.println("Mapi v‰‰rtused: " + demoMap.values());
+		
 	}
 
 	public String myMethod(Map<Integer, String> map) {
