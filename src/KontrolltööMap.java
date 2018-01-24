@@ -22,6 +22,7 @@ public class KontrolltööMap {
 		isikukoodid.add("48501241234");
 
 		// => [ {"39001247777" : "mees"}, {"48501241234" : "naine"}]
+		System.out.println(kt.mapCodes(isikukoodid));
 	}
 
 	// Ülesanne 1 ( => [1, 3]
@@ -40,8 +41,8 @@ public class KontrolltööMap {
 		// luua map, kuhu lähevad isikukoodid koos "mees"/"naine"
 		Map<String, String> map = new HashMap<String, String>();
 		// FOR-loop codes
-		for (Entry<String, String> entry : map.entrySet()) {
-
+		for (String code : codes) {
+			map.put(code, getSex(code) );
 		}
 		return map;
 	}
