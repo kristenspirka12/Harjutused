@@ -22,6 +22,12 @@ public class KontrolltööMap {
 
 		// => [ {"39001247777" : "mees"}, {"48501241234" : "naine"}]
 		System.out.println(kt.mapCodes(isikukoodid));
+		
+		Map<String, Integer> map2 = new HashMap<String, Integer>();
+		map2.put("a",1 );
+		map2.put("ba",15 );
+		map2.put("aabits",3 );
+		System.out.println(kt.biggerThanTen(map2));
 	}
 
 	// Ülesanne 1 ( => [1, 3]
@@ -54,19 +60,28 @@ public class KontrolltööMap {
 
 	// Ülesanne 3
 	// Eemalda kõik paarid, mille väärtus on suurem kui 10.
-	public Map<Integer, String> biggerThanTen(Map<Integer, String> map) {
-
-		return map;
-
+	public List<String> biggerThanTen(Map<String, Integer> map) {
+		List<String> keys = new ArrayList<>();
+		for (Entry<String, Integer> entry : map.entrySet()) {
+			if (entry.getValue() < 10) {
+				keys.add(entry.getKey());
+			}
+		}
+		return keys;
+		
 	}
 
 	// Ülesanne 4
 	// Muuta etteantud mapi nii, et kui mõlemad võtmed "a" ja "b" on esindatud, siis eemaldatakse võti-väärtuspaar "c",
-	// kui see on olemas. Kui "c" olemas ei ole, siis luua paar "d" :"a ja b puuduvad".
-	public Map<Integer, String> removeC(Map<Integer, String> map) {
+	// kui see on olemas. Kui "c" olemas ei ole, siis luua paar "d" :"c puudub".
+	public Map<String, String> removeC(Map<String, String> map) {
 		if (map.containsKey("c")) {
 			
 		}
+		
+		// kontroll, kas a ja b on olemas
+			// - c on olemas -> c eemaldatakse
+			// - c ei ole -> lisatakse d
 		return map;
 	}
 
