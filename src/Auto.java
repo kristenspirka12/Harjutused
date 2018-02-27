@@ -65,6 +65,12 @@ public class Auto {
 	public void addOmanikud(String omanik) {
 		this.omanikud.add(omanik);
 	}
+
+	@Override
+	public String toString() {
+		return "Auto [automark=" + automark + ", mudel=" + mudel + ", numbrimärk=" + numbrimärk + ", omanikud="
+				+ omanikud + "]";
+	}
 	
 
 }
