@@ -9,7 +9,7 @@ public class App3 {
 
 	public static void main(String[] args) {
 		List<String> omanikud = new ArrayList<>(Arrays.asList("Jüri", "Peeter"));
-		Auto car1 = new Auto("BMW", "X5", "555 BMW", LocalDate.parse("2017-02-10"), omanikud);
+		Auto car1 = new Auto(Automark.BMW, "X5", "555 BMW", LocalDate.parse("2017-02-10"), omanikud);
 		System.out.println(car1);
 
 	}

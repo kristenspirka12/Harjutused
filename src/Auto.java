@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Auto {
-	private String automark;
+	private Automark automark;
 	private String mudel;
 	private String numbrimärk;
 	private LocalDate arvelevõtt;
 	private List<String> omanikud;
 	
 	
-	public Auto(String automark, String mudel, String numbrimärk, LocalDate arvelevõtt, List<String> omanikud) {
+	public Auto(Automark automark, String mudel, String numbrimärk, LocalDate arvelevõtt, List<String> omanikud) {
 		this.automark = automark;
 		this.mudel = mudel;
 		this.numbrimärk = numbrimärk;
@@ -23,14 +23,14 @@ public class Auto {
 	/**
 	 * @return the automark
 	 */
-	public String getAutomark() {
+	public Automark getAutomark() {
 		return automark;
 	}
 
 	/**
 	 * @param automark the automark to set
 	 */
-	public void setAutomark(String automark) {
+	public void setAutomark(Automark automark) {
 		this.automark = automark;
 	}
 
@@ -94,6 +94,7 @@ public class Auto {
 		this.omanikud.add(omanik);
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Auto [automark=" + automark + ", mudel=" + mudel
