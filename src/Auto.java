@@ -1,23 +1,23 @@
 package Car;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Auto {
 	private String automark;
 	private String mudel;
 	private String numbrimärk;
-	private Date arvelevõtt;
+	private LocalDate arvelevõtt;
 	private List<String> omanikud;
 	
 	
-	public Auto(String automark, String mudel, String numbrimärk, Date arvelevõtt, List<String> omanikud) {
+	public Auto(String automark, String mudel, String numbrimärk, LocalDate arvelevõtt, List<String> omanikud) {
 		this.automark = automark;
 		this.mudel = mudel;
 		this.numbrimärk = numbrimärk;
 		this.arvelevõtt = arvelevõtt;
-		this.omanikud = new ArrayList<>();
+		this.omanikud = omanikud;
 	}
 
 	/**
@@ -56,6 +56,34 @@ public class Auto {
 	}
 
 	/**
+	 * @return the arvelevõtt
+	 */
+	public LocalDate getArvelevõtt() {
+		return arvelevõtt;
+	}
+
+	/**
+	 * @param arvelevõtt the arvelevõtt to set
+	 */
+	public void setArvelevõtt(LocalDate arvelevõtt) {
+		this.arvelevõtt = arvelevõtt;
+	}
+
+	/**
+	 * @return the omanikud
+	 */
+	public List<String> getOmanikud() {
+		return omanikud;
+	}
+
+	/**
+	 * @param omanikud the omanikud to set
+	 */
+	public void setOmanikud(List<String> omanikud) {
+		this.omanikud = omanikud;
+	}
+
+	/**
 	 * @param numbrimärk the numbrimärk to set
 	 */
 	public void setNumbrimärk(String numbrimärk) {
@@ -68,8 +96,9 @@ public class Auto {
 
 	@Override
 	public String toString() {
-		return "Auto [automark=" + automark + ", mudel=" + mudel + ", numbrimärk=" + numbrimärk + ", omanikud="
-				+ omanikud + "]";
+		return "Auto [automark=" + automark + ", mudel=" + mudel
+				+ ", numbrimärk=" + numbrimärk + ", arvelevõtt=" + arvelevõtt
+				+ ", omanikud=" + omanikud + "]";
 	}
 	
 
