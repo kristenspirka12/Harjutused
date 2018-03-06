@@ -1,5 +1,5 @@
 package Car;
 
 public enum Mudeliliik {
-	KUPEE, SEDAAN, UNIVERSAAL
+	KUPEE, SEDAAN, UNIVERSAAL, MAHTUNIVERSAAL, KABRIOLETT
 }
